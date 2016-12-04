@@ -1,0 +1,4 @@
+#Sat Jul 27 21:35:04 IST 2013
+PREF_VM_INSTALL_SYSTEM_PROPERTY.org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType.1374390793723.java.specification.version=1.7
+eclipse.preferences.version=1
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1374390793723" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1374390793723" javadocURL\="http\://java.sun.com/javase/7/docs/api/" name\="jre7" path\="C\:\\Program Files\\Java\\jre7"/>\r\n</vmType>\r\n</vmSettings>\r\n

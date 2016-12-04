@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script src="/js/CorrectionsTab.js"></script>
+<script type="text/javascript">
+$(function(){
+
+$("#editSWordDialog").dialog({
+      autoOpen: false,
+      modal: true,
+      width:"auto",
+      height:"auto",
+      show: {
+        effect: "slide",
+        direction : "up",
+        duration : "slow"
+      },
+      hide: {
+        effect: "explode",
+        duration : "slow"
+      },
+      buttons: {
+        Save : function() {
+          saveEditSWord();
+        },
+        Cancel: function() {
+         clearCnEditSWord();
+        }
+      }
+      
+    });
+
+$("#deleteSWordDialog").dialog({
+      autoOpen: false,
+      modal: true,
+      width:450,
+      height:"auto",
+      show: {
+        effect: "slide",
+        direction : "up",
+        duration : "slow"
+      },
+      hide: {
+        effect: "explode",
+        duration : "slow"
+      },
+      buttons: {
+        Ok : function() {
+          saveSWordDelete();
+        },
+        Cancel: function() {
+         clearSWordDelete();
+        }
+      }
+      
+    });
+    
+    $("#editEWordDialog").dialog({
+      autoOpen: false,
+      modal: true,
+      width:"auto",
+      height:"auto",
+      show: {
+        effect: "slide",
+        direction : "up",
+        duration : "slow"
+      },
+      hide: {
+        effect: "explode",
+        duration : "slow"
+      },
+      buttons: {
+        Save : function() {
+          saveEditEWord();
+        },
+        Cancel: function() {
+         clearCnEditEWord();
+        }
+      }
+      
+    });
+
+$("#deleteEWordDialog").dialog({
+      autoOpen: false,
+      modal: true,
+      width:450,
+      height:"auto",
+      show: {
+        effect: "slide",
+        direction : "up",
+        duration : "slow"
+      },
+      hide: {
+        effect: "explode",
+        duration : "slow"
+      },
+      buttons: {
+        Ok : function() {
+          saveEWordDelete();
+        },
+        Cancel: function() {
+         clearEWordDelete();
+        }
+      }
+      
+    });
+    
+});
+
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td>English word</td>
+<td>
+<input type="text" name="cnEngWord" id="cnEngWordId" size="30" maxlength="500" value="" onkeypress="cnEnterPress(event)"/>
+&nbsp;
+<button name="cnSearchBtn" id="cnSearchBtnId" onclick="cnSearch()">Search</button>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div id="cnDiv"></div>
+</td>
+</tr>
+</table>
+
+<!-- Edit sword dialog -->
+<div id="editSWordDialog" title="Edit" style="display:none">
+<input type="hidden" id="cnSEditPid"/>
+<table>
+<tr><td>English Word</td>
+<td><span id="cnSEditEWordSpan"></span></td>
+</tr>
+<tr>
+<td>Old Sourashtra Word</td>
+<td><span id="cnSEditOSWordSpan"></span></td></tr>
+<tr>
+<td>New Sourashtra Word</td>
+<td><textarea name="cnSEditNSWord" id="cnSEditNSWordId" cols="40" rows="5"></textarea>
+</br>500 characters max</td></tr>
+</table>
+</div>
+<!-- Delete sword dialog -->
+<div id="deleteSWordDialog" title="Delete" style="display:none">
+<input type="hidden" id="cnSDeletePid"/>
+You are about to delete the word <span id="delWord" style="width:100px">&nbsp;</span>. Do you wish to continue?
+</div>
+
+<!-- Edit eword dialog -->
+<div id="editEWordDialog" title="Edit" style="display:none">
+<input type="hidden" id="cnEEditPid"/>
+<table>
+<tr>
+<td>Old English Word</td>
+<td><span id="cnEEditOEWordSpan"></span></td></tr>
+<tr>
+<td>New English Word</td>
+<td><textarea name="cnEEditNEWord" id="cnEEditNEWordId" cols="40" rows="5"></textarea>
+</br>500 characters max</td></tr>
+</table>
+</div>
+<!-- Delete eword dialog -->
+<div id="deleteEWordDialog" title="Delete" style="display:none">
+<input type="hidden" id="cnEDeletePid"/>
+You are about to delete the word <span id="delEWord" style="width:100px">&nbsp;</span>. Do you wish to continue?
+</div>
+
+</body>
+</html>

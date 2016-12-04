@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr>
+<td>English word</td>
+<td>
+<input type="text" name="ceEngWord" id="ceEngWordId" size="30" maxlength="500" value="" onkeypress="ceEnterPress(event)"/>
+&nbsp;
+<button name="ceCheckAvailBtn" id="ceCheckAvailBtnId" onclick="checkAvailability()">Check Availability</button>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<div id="ceCheckAvailDiv"></div>
+</td>
+</tr>
+
+<tr>
+<td><span class="ceInitHide" style="display:none">Sourashtra word(s)</br> & Additional Info</span></td>
+<td><span class="ceInitHide" style="display:none"><textarea name="ceSWord" id="ceSWordId" cols="40" rows="5"></textarea>
+</br>500 characters max
+</span>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<span class="ceInitHide" style="display:none">
+<div align="right">
+<button name="ceSaveBtn" id="ceSaveBtnId" onclick="saveWord()">Save</button>
+<button name="ceClearBtn" id="ceClearBtnId" onclick="clearContributeTab()">Clear</button>
+</div></span></td>
+</tr>
+</table>
+
+<script src="/js/ContributeTab.js"></script>
+</body>
+</html>
